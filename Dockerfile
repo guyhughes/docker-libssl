@@ -10,4 +10,5 @@ RUN apt-get update \
         python-dev \
         vim-nox tmux rsync git \
         libssl-dev  libjemalloc-dev zlib1g-dev \
+        lua-check luarocks \
         openssl curl

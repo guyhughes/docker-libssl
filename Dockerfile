@@ -1,4 +1,5 @@
 FROM debian:stretch
+RUN useradd -ms /bin/bash user
 
 RUN apt-get update \
       && apt-get upgrade -y \
@@ -12,3 +13,7 @@ RUN apt-get update \
         libssl-dev  libjemalloc-dev zlib1g-dev \
         lua-check luarocks \
         openssl curl
+
+USER user:user
+VOLUME /app
+WORKDIR /app
